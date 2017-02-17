@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-xs-12 order-title">
+		<h1>Orders History</h1>
+		<span>Orders: <%= @orders.size %></span>
+	</div>
+	<% @orders.each do |order| %>
+		<div class="col-xs-12 col-sm-6 col-md-4 order-wrapper">
+			<div>Address: <%= order.city %> <%= order.address %></div>
+			<p>Date: <%= order.created_at %></p>
+			<p>Status: <%= order.status %></p>
+			<span>Price: $<%= order.price %></span>
+		</div>
+	<% end %>
+</div>

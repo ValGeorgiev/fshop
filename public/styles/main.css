@@ -1,0 +1,152 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	background: #fafafa;
+}
+
+.main-container {
+	margin-bottom: -200px;
+	min-height: 100%;
+}
+
+.main-container:after {
+	content: "";
+	display: block;
+	height: 200px;
+}
+
+.footer {
+	max-height: 200px;
+	height: 200px;
+	border-top: 1px solid #e6e6e6;
+	background: #fafafa;
+
+}
+
+.header .navbar-inverse {
+	background-image: linear-gradient(to bottom, #47AFEA 0, #03386B 100%);
+	border: 0;
+	border-radius: inherit;
+}
+
+.header .navbar-inverse .navbar-brand {
+	color: #fff;
+}
+
+.header .navbar {
+	margin-bottom: 0;
+}
+
+.main-container .navbar {
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.main-container .navbar-nav {
+	float: none;
+	display: flex;
+	justify-content: center;
+}
+
+.header .navbar-form {
+	border: 0;
+}
+
+.header .navbar-form .form-group{
+    width: 200px;
+    display: inline-block;
+}
+
+.magnifier {
+	width: 34px;
+	height: 34px;
+	margin: 8px;
+	cursor: pointer;
+}
+
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+.footer {
+	margin-top: 30px;
+}
+
+.footer .title {
+	font-size: 25px;
+	line-height: 48px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.hide {
+	display: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.bag-wrapper {
+	cursor: pointer;
+	position: relative;
+	padding: 0 !important;
+}
+
+.bag-wrapper:hover {
+	background-color: transparent !important;
+}
+
+.bag-icon {
+	width: 40px;
+	height: 40px;
+	margin: 4px 5px 5px 15px;
+	background-color: #ddd;
+	border-radius: 10px;
+}
+
+.bag-counter {
+	color: black;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    left: 23px;
+}
+
+.error-msg {
+	position: absolute;
+	top: 47px;
+	left: 50%;
+	height: 40px;
+	line-height: 40px;
+	background: #DA3448;
+	width: 250px;
+	margin-left: -125px;
+	text-align: center;
+	border-radius: 12px;
+	color: white;
+	font-size: 19px;
+}
+
+.checkout-title {
+	text-align: center;
+}

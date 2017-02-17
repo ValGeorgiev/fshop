@@ -1,0 +1,34 @@
+<div class="car-wrapper">
+	<h1 class="cart-title">Your Cart</h1>
+	<% unless @uproducts.empty? %>
+		<div class="row">
+			<% @uproducts.each do |uproduct| %>
+				<div class="product-cart-wrapper">
+					<div class="col-xs-12 col-sm-5 img-wrapper">
+						<img class="product-cart-img" src="<%= uproduct.product.image %>">
+					</div>
+					<div class="col-xs-12 col-sm-5 names-wrapper">
+						<span class="product-cart-name"><%= uproduct.product.name %>
+						</span>
+						<p class="product-cart-description"><%= uproduct.product.description %></p>
+						<span class="product-cart-size">Size: <%= uproduct.size %></span>
+					</div>
+					<div class="col-xs-12 col-sm-2 product-cart-items-wrapper">
+						<span class="product-cart-items">Items: <%= uproduct.quantity %></span>
+						<p class="product-cart-price">Price for 1 item: <%= uproduct.product.price %></p>
+						<button class="product-cart-remove" data-id="<%= uproduct.id %>">Remove from basket</button>
+					</div>
+				</div>
+			<% end %>
+			<div class="col-xs-12 pay-cart-wrapper">
+				<span class="price-label">Price: <span class="price-tag">$<%= @price %></span></span>
+				<a id="checkout-link" class="procceed-checkout" href="checkout">Checkout</a>
+			</div>
+		</div>	
+	<% else %>
+		<h3>
+			Ohh, you have no products in your basket
+			<a href="products">Keep Looking</a>
+		</h3>
+	<% end %>
+</div>

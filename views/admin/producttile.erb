@@ -1,0 +1,13 @@
+<div class="row admin-product">
+	<div class="col-xs-4">
+		<img src="<%= product.image %>">	
+	</div>
+	<div  class="col-xs-8 product-details">
+		<h2 class="name"><%= product.name %></h2>
+		<a href="" data-id="<%= product.id %>" class="btn btn-primary edit-modal">Edit</a>
+		<a href="" data-id="<%= product.id %>" class="btn btn-primary comments-modal">Comments</a>
+		<p class="description hide"><%= product.description %></p>
+		<input type="hidden" class="id hide" value="<%= product.id %>">
+		<button class="btn-primary deleteProduct" data-id="<%= product.id %>">X</button>
+	</div>
+</div>

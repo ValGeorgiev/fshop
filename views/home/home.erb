@@ -1,0 +1,14 @@
+<%= erb :heroimage %>
+
+<h1 class="carousel-title">The most popular sport products</h1>
+
+<div class="owl-carousel">
+	<% if @products %>
+		<% @products.each do |product| %>
+			<%= erb :"products/producttile", :locals => {:product => product} %>
+		<% end %>
+	<% end %>
+</div>
+
+
+<%= erb :"products/quickview" %>

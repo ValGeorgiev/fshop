@@ -1,0 +1,40 @@
+<div id="signup" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal register-form" method="post" action="/signup">
+          <fieldset>
+            <div class="form-group">
+              <label for="emailRegister" class="col-lg-2 control-label">Email</label>
+              <div class="col-lg-10">
+                <input type="text" name="email" class="form-control" id="emailRegister" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nameRegister" class="col-lg-2 control-label">Name</label>
+              <div class="col-lg-10">
+                <input type="text" name="name" class="form-control" id="nameRegister" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="passwordRegister" class="col-lg-2 control-label">Password</label>
+              <div class="col-lg-10">
+                <input type="password" name="password" class="form-control" id="passwordRegister" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary registerBtn">Sign up</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

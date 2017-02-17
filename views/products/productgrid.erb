@@ -1,0 +1,31 @@
+
+<div class="row product-wrapper">
+	<% if @products.size > 0 %>
+		<% if !@user || @user.role != 'admin' %> 
+			<div class="col-xs-0 col-sm-0 col-md-2">
+				
+			</div>
+		<% end %>
+		<div class="col-xs-12 col-sm-12 <% if !@user || @user.role != 'admin' %> col-md-10 <% end %>">
+			<div class="row grid">
+				<% @products.each do |product| %>
+					<% if !@user || @user.role != 'admin' %> 
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<%= erb :"products/producttile", :locals => {:product => product} %>
+						</div>
+					<% else %>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<%= erb :"admin/producttile", :locals => {:product => product} %>
+						</div>
+					<% end %>
+
+				<% end %>
+			</div>
+		</div>
+	<% else %>
+		<h1 class="no-products-title">Sorry we don't have products! <a href="/">Go back to the home page!</a></h1>
+	<% end %>
+</div>
+
+
+<%= erb :"products/quickview" %>

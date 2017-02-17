@@ -1,0 +1,27 @@
+.modal-img {
+	width: 100%;	
+}
+
+.modal-title {
+	font-size: 35px;
+
+}
+
+.modal-description {
+	font-size: 22px;
+	line-height: 37px;
+	height: 80px;
+	max-height: 80px;
+	overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.modal-message {
+	cursor: pointer;
+	display: none;
+}

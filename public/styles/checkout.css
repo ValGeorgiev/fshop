@@ -1,0 +1,26 @@
+.checkout-cart-wrapper {
+	height: 130px;
+	margin: 20px 0;
+}
+
+.checkout-cart-img {
+	width: 130px;
+}
+
+.checkout-cart-title {
+	text-align: center;
+}
+
+.thank .col-xs-12 {
+	text-align: center;
+
+}
+
+.thank-order {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input.error {
+	border-color: red;
+}

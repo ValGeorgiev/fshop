@@ -1,0 +1,22 @@
+<div class="row thank">
+	<div class="col-xs-12 thank-title">
+		<h1>Checkout is successful!</h1>
+		<p>Thank you!</p>
+	</div>
+
+	<div class="col-xs-12 thank-order">
+		<span class="thank-price">
+			Price: <%= @order.price %>	
+		</span> <br>
+		<span class="thank-user">User: <%= @order.user.name %></span> <br>
+		<span class="thank-city">City: <%= @order.city %></span> <br>
+		<span class="thank-address">Address: <%= @order.address %></span>
+	</div>
+
+	<div class="col-xs-12">
+		<a href="/products">Go Shopping Again</a>
+	</div>
+
+</div>
+
+

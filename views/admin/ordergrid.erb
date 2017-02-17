@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h1>Orders</h1>
+		<span>Size: <%= @orders.size %></span>
+	</div>
+	<% @orders.each do |order| %>
+
+		<div class="col-xs-12 col-sm-4 col-md-3">
+			<p><%= order.user.name %></p>
+			<p><%= order.address %></p>
+			<p><%= order.created_at %></p>
+			<p><%= order.status %></p>
+			<label class="complete-label" for="complete-checkbox-<%= order.id %>">Make this order complete
+				<input type="checkbox" class="complete-checkbox" id="complete-checkbox-<%= order.id %>" data-id="<%= order.id %>" name="admin" <% if order.status == 'COMPLETE' %> checked <% end %>/>
+			</label>
+
+		</div>
+
+	<% end %>
+</div>

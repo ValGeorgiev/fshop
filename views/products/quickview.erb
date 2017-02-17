@@ -1,0 +1,60 @@
+<div class="modal" id="product">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-sm-5">
+      			<img class="modal-img" src="">
+      		</div>
+			<div class="col-sm-7">
+				<div class="options">
+					<p class="modal-description"></p>
+					
+					<div class="modal-price-wrapper">
+						<span>Price: </span>
+						<span class="modal-price"></span>
+					</div>
+					<div class="modal-size-wrapper">
+						<span>Size: </span>	
+						<select class="modal-size">
+							
+						</select>
+					</div>
+					<div class="modal-pay">
+						<input class="modal-quantity" type="number" name="quantity" value="1">
+						<input class="modal-id" type="hidden">
+						<button class="modal-add" id="add-product-button">Add</button>
+					</div>
+          <div class="modal-message">
+            <p class="msg"></p>
+          </div>
+				</div>
+			</div>      	
+      	</div>
+      	<div class="row">
+      		<div class="col-xs-12 comments-title">
+      			<h2 class="title">Comments</h2>
+      			<button class="show-input">New comment</button>
+      		</div>
+      		<div class="col-xs-12 comment-add">
+      			<div class="row">
+      				<div class="col-xs-10">
+      					<textarea class="add-input" maxlength="220"></textarea>
+      				</div>
+      				<div class="col-xs-2">
+      					<button class="btn btn-primary add-comment-btn" data-user-id="<%= session[:uid] %>">Add</button>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-xs-12 comments">
+      			
+      		</div>
+      	</div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Football Shop</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <% if !@user || @user.role != "admin" %>
+        <form class="navbar-form navbar-left hide" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control search-input" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default search-btn">Search</button>
+        </form>
+        <img class="magnifier" src="../img/magnifier.png">
+      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <% if !!@user %>
+          <% if @user.name != '' %>
+            <li><span class="hello-msg">Hello, <%= @user.name %></span></li>
+          <% end %>
+          <% if @user.role == 'user' %>
+            <li class="order-history"><a id="order-link" href="/orders">Order History</a></li>
+            <li><a href="cart" id="bag-link" class="bag-wrapper"><img class="bag-icon" src="../img/bag.png"><span class="bag-counter">(0)</span> </a></li>
+          <% end %>
+          <li><a class="logout" id="logout" href="logout">Log out</a></li>
+        <% else %>
+          <li><button type="button" id="login-button" name="Login" data-toggle="modal" data-target="#login" class="login">Log In</button></li>
+          <li><button type="button" id="signin-button" name="Signup" data-toggle="modal" data-target="#signup" class="signup">Sign Up</button></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+

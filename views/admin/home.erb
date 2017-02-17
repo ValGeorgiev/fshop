@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="../styles/admin.css">
+
+<div class="col-xs-12 admin-header">
+	
+	<h1>Hello, Admin</h1>
+	<p>Have a good day, <%= @user.name %></p>
+
+
+	<form class="form-horizontal" method="post" action="/admin/search">
+	  <fieldset>
+	    <div class="form-group">
+			<label for="admin-search" class="col-xs-2 control-label">Find a product:</label>
+			<div class="col-xs-5">
+				<input type="text" class="form-control" id="admin-search" placeholder="adidas, t-shirt" name="index">
+			</div>
+			<div class="col-xs-2">
+	     		<button type="submit" class="btn btn-primary">Search</button>
+			</div>
+	    </div>
+	  </fieldset>
+	</form>
+
+	<a href="/admin/add" class="btn btn-primary">Add a product</a>
+	<a href="/admin/users" class="btn btn-primary">Users</a>
+	<a href="/admin/orders" class="btn btn-primary">Orders</a>
+
+</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Shop</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/home.css">
+    <link rel="stylesheet" type="text/css" href="../styles/quicklook.css">
+    <link rel="stylesheet" type="text/css" href="../styles/product.css">
+    <link rel="stylesheet" type="text/css" href="../styles/cart.css">
+    <link rel="stylesheet" type="text/css" href="../styles/checkout.css">
+    <link rel="stylesheet" type="text/css" href="../styles/orders.css">
+
+</head>
+<body>
+	<div class="header">
+		<%= erb :header %>
+	</div>
+    <div class="main-container">
+    	<% if !@user || @user.role != "admin" %>
+	    	<%= erb :mainnav %>
+	    <% end %>
+
+        <%= yield %>
+    </div>
+    <% if !@user || @user.role != "admin" %> 
+		<div class="footer">
+			<%= erb :footer %>
+		</div>
+	<% end %>
+
+	<% if @error %>
+		<div class="error-msg">
+			<%= @error %>
+		</div>
+	<% end %>
+
+	<%= erb :login %>
+	<%= erb :signup %>
+
+	<!-- Libraries -->
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+
+	<!-- Static Files -->
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/home.js"></script>
+	<script type="text/javascript" src="../js/admin.js"></script>	
+	<script type="text/javascript" src="../js/product.js"></script>
+
+</body>
+</html>

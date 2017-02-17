@@ -1,0 +1,16 @@
+<div class="row"> 
+
+	<% @users.each do |user| %>
+		<div class="col-xs-12 col-sm-3 user-section">
+			<span class="user-name"><%= user.name %></span>
+			<span class="user-email"><%= user.email %></span>
+			<span class="user-role">Role: <%= user.role %></span>
+			<label class="user-label" for="admin-checkbox-<%= user.id %>">Make this user admin
+				<input type="checkbox" class="admin-checkbox" id="admin-checkbox-<%= user.id %>" data-id="<%= user.id %>" name="admin" <% if user.role == 'admin' %> checked <% end %>/>
+
+			</label>
+
+		</div>
+	<% end %>
+
+</div>
